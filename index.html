@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boost Seminario de Título</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #000000;
+    }
+    .prose {
+        color: #000000;
+        --tw-prose-body: #000;
+        --tw-prose-headings: #000;
+        --tw-prose-lead: #000;
+        --tw-prose-links: #000;
+        --tw-prose-bold: #000;
+        --tw-prose-counters: #000;
+        --tw-prose-bullets: #000;
+        --tw-prose-hr: theme(colors.gray.200);
+        --tw-prose-quotes: #000;
+        --tw-prose-quote-borders: theme(colors.gray.300);
+        --tw-prose-captions: #000;
+        --tw-prose-code: #000;
+        --tw-prose-pre-code: theme(colors.gray.200);
+        --tw-prose-pre-bg: theme(colors.gray.800);
+        --tw-prose-th-borders: theme(colors.gray.300);
+        --tw-prose-td-borders: theme(colors.gray.200);
+        --tw-prose-invert-body: #000;
+        --tw-prose-invert-headings: #000;
+        --tw-prose-invert-lead: #000;
+        --tw-prose-invert-links: #000;
+        --tw-prose-invert-bold: #000;
+        --tw-prose-invert-counters: #000;
+        --tw-prose-invert-bullets: #000;
+        --tw-prose-invert-hr: theme(colors.gray.700);
+        --tw-prose-invert-quotes: #000;
+        --tw-prose-invert-quote-borders: theme(colors.gray.700);
+        --tw-prose-invert-captions: #000;
+        --tw-prose-invert-code: #000;
+        --tw-prose-invert-pre-code: theme(colors.gray.300);
+        --tw-prose-invert-pre-bg: rgba(0,0,0,0.5);
+        --tw-prose-invert-th-borders: theme(colors.gray.600);
+        --tw-prose-invert-td-borders: theme(colors.gray.700);
+    }
+     .prose a {
+        text-decoration: underline;
+    }
+    .gantt-table-container table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .gantt-table-container th,
+    .gantt-table-container td {
+        border: 1px solid #e5e7eb;
+        padding: 8px;
+        text-align: left;
+        color: #000000;
+    }
+    .gantt-table-container th {
+        background-color: #f3f4f6;
+    }
+    .gantt-task-bar {
+        background-color: #3b82f6;
+        color: white;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-bottom: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .benchmark-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .benchmark-table th, .benchmark-table td {
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 8px;
+        text-align: left;
+        color: black;
+    }
+    .benchmark-table th {
+        border-bottom-width: 2px;
+    }
+    .gantt-container-for-pdf table {
+        font-size: 0.5rem; /* Half of 1rem base */
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400; /* regular */
+    }
+</style>
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
